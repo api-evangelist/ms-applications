@@ -1,9 +1,12 @@
+aid: ms-applications
 name: Microsoft Applications APIs
 description: Collection of Microsoft application APIs for productivity, collaboration, and enterprise services
-image: https://www.microsoft.com/favicon.ico
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://developer.microsoft.com
 created: '2024-01-15'
-modified: '2024-01-15'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 apis:
 - name: Microsoft Graph API
   description: Unified API endpoint for accessing Microsoft 365 services including users, mail, calendar, contacts, files, and more
@@ -142,9 +145,8 @@ apis:
   - type: API Reference
     url: https://docs.microsoft.com/graph/api/resources/plannertask
 maintainers:
-- name: Microsoft
-  email: support@microsoft.com
-  url: https://developer.microsoft.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 tags:
 - microsoft
 - microsoft-365
