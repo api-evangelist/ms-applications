@@ -18,16 +18,15 @@ apis:
     humanURL: https://developer.microsoft.com/graph
     baseURL: https://graph.microsoft.com
     tags:
-      - productivity
-      - collaboration
-      - identity
-      - cloud
+      - Cloud
+      - Collaboration
+      - Identity
+      - Productivity
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/graph/overview
       - type: OpenAPI
-        url: 
-          https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/openapi/v1.0/openapi.yaml
+        url: https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/openapi/v1.0/openapi.yaml
       - type: Authentication
         url: https://docs.microsoft.com/graph/auth/
       - type: SDKs
@@ -41,19 +40,17 @@ apis:
     humanURL: https://developer.microsoft.com/microsoft-teams
     baseURL: https://graph.microsoft.com/v1.0/teams
     tags:
-      - collaboration
-      - chat
-      - meetings
-      - productivity
+      - Chat
+      - Collaboration
+      - Meetings
+      - Productivity
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/microsoftteams/platform/
       - type: Getting Started
-        url: 
-          https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-overview
+        url: https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-overview
       - type: Bot Framework
-        url: 
-          https://docs.microsoft.com/microsoftteams/platform/bots/what-are-bots
+        url: https://docs.microsoft.com/microsoftteams/platform/bots/what-are-bots
       - type: Sample Apps
         url: https://github.com/OfficeDev/Microsoft-Teams-Samples
   - name: Outlook Mail API
@@ -63,9 +60,9 @@ apis:
     humanURL: https://developer.microsoft.com/outlook
     baseURL: https://graph.microsoft.com/v1.0/me/messages
     tags:
-      - email
-      - messaging
-      - productivity
+      - Email
+      - Messaging
+      - Productivity
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/graph/api/resources/mail-api-overview
@@ -80,18 +77,17 @@ apis:
     humanURL: https://developer.microsoft.com/onedrive
     baseURL: https://graph.microsoft.com/v1.0/me/drive
     tags:
-      - storage
-      - files
-      - cloud
-      - collaboration
+      - Cloud
+      - Collaboration
+      - Files
+      - Storage
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/onedrive/developer/
       - type: API Reference
         url: https://docs.microsoft.com/graph/api/resources/onedrive
       - type: File Picker
-        url: 
-          https://docs.microsoft.com/onedrive/developer/controls/file-pickers/
+        url: https://docs.microsoft.com/onedrive/developer/controls/file-pickers/
   - name: SharePoint API
     description: >-
       API for accessing SharePoint sites, lists, and content.
@@ -99,19 +95,17 @@ apis:
     humanURL: https://developer.microsoft.com/sharepoint
     baseURL: https://graph.microsoft.com/v1.0/sites
     tags:
-      - collaboration
-      - content management
-      - enterprise
-      - intranet
+      - Collaboration
+      - Content Management
+      - Enterprise
+      - Intranet
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/sharepoint/dev/
       - type: REST API Reference
-        url: 
-          https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service
+        url: https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service
       - type: Framework
-        url: 
-          https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview
+        url: https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview
   - name: Azure Active Directory API
     description: >-
       API for identity and access management in Azure AD.
@@ -119,19 +113,17 @@ apis:
     humanURL: https://developer.microsoft.com/identity
     baseURL: https://graph.microsoft.com/v1.0/users
     tags:
-      - identity
-      - authentication
-      - authorization
-      - security
+      - Authentication
+      - Authorization
+      - Identity
+      - Security
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/azure/active-directory/develop/
       - type: Authentication Flows
-        url: 
-          https://docs.microsoft.com/azure/active-directory/develop/authentication-flows-app-scenarios
+        url: https://docs.microsoft.com/azure/active-directory/develop/authentication-flows-app-scenarios
       - type: Microsoft Identity Platform
-        url: 
-          https://docs.microsoft.com/azure/active-directory/develop/v2-overview
+        url: https://docs.microsoft.com/azure/active-directory/develop/v2-overview
   - name: Microsoft To Do API
     description: >-
       API for managing tasks and to-do lists.
@@ -139,9 +131,9 @@ apis:
     humanURL: https://developer.microsoft.com/graph
     baseURL: https://graph.microsoft.com/v1.0/me/todo
     tags:
-      - productivity
-      - tasks
-      - planning
+      - Planning
+      - Productivity
+      - Tasks
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/graph/api/resources/todo-overview
@@ -154,10 +146,10 @@ apis:
     humanURL: https://developer.microsoft.com/graph
     baseURL: https://graph.microsoft.com/v1.0/planner
     tags:
-      - project management
-      - collaboration
-      - productivity
-      - tasks
+      - Collaboration
+      - Productivity
+      - Project Management
+      - Tasks
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/graph/api/resources/planner-overview
@@ -167,13 +159,13 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 tags:
-  - microsoft
-  - microsoft-365
-  - office
-  - productivity
-  - enterprise
-  - cloud
-  - saas
+  - Cloud
+  - Enterprise
+  - Microsoft
+  - Microsoft-365
+  - Office
+  - Productivity
+  - Saas
 include:
   - name: Microsoft Developer Network
     url: https://developer.microsoft.com
