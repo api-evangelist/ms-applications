@@ -1,28 +1,44 @@
 # Microsoft Applications APIs (ms-applications)
-Collection of Microsoft application APIs for productivity, collaboration, and enterprise services
+
+Collection of Microsoft application APIs for productivity, collaboration, and enterprise services.
 
 **URL:** [Visit APIs.json URL](https://developer.microsoft.com)
 
-## Tags:
+## Scope
 
- - microsoft, microsoft-365, office, productivity, enterprise, cloud, saas
+- **Type:** Index
+
+## Tags
+
+- Cloud
+- Enterprise
+- Microsoft
+- Microsoft-365
+- Office
+- Productivity
+- Saas
 
 ## Timestamps
 
-- **Created:** 2024-01-15 
-- **Modified:** 2024-01-15 
+- **Created:** 2024-01-15
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Microsoft Graph API
-Unified API endpoint for accessing Microsoft 365 services including users, mail, calendar, contacts, files, and more
+
+Unified API endpoint for accessing Microsoft 365 services including users, mail, calendar, contacts, files, and more.
 
 **Human URL:** [https://developer.microsoft.com/graph](https://developer.microsoft.com/graph)
 
+**Base URL:** https://graph.microsoft.com
 
-#### Tags:
+#### Tags
 
- - productivity, collaboration, identity, cloud
+- Cloud
+- Collaboration
+- Identity
+- Productivity
 
 #### Properties
 
@@ -33,14 +49,19 @@ Unified API endpoint for accessing Microsoft 365 services including users, mail,
 - [Pricing](https://azure.microsoft.com/pricing/details/active-directory/)
 
 ### Microsoft Teams API
-API for building apps and bots that integrate with Microsoft Teams
+
+API for building apps and bots that integrate with Microsoft Teams.
 
 **Human URL:** [https://developer.microsoft.com/microsoft-teams](https://developer.microsoft.com/microsoft-teams)
 
+**Base URL:** https://graph.microsoft.com/v1.0/teams
 
-#### Tags:
+#### Tags
 
- - collaboration, chat, meetings, productivity
+- Chat
+- Collaboration
+- Meetings
+- Productivity
 
 #### Properties
 
@@ -50,14 +71,18 @@ API for building apps and bots that integrate with Microsoft Teams
 - [Sample Apps](https://github.com/OfficeDev/Microsoft-Teams-Samples)
 
 ### Outlook Mail API
-API for accessing and managing email messages through Microsoft Outlook
+
+API for accessing and managing email messages through Microsoft Outlook.
 
 **Human URL:** [https://developer.microsoft.com/outlook](https://developer.microsoft.com/outlook)
 
+**Base URL:** https://graph.microsoft.com/v1.0/me/messages
 
-#### Tags:
+#### Tags
 
- - email, messaging, productivity
+- Email
+- Messaging
+- Productivity
 
 #### Properties
 
@@ -66,14 +91,19 @@ API for accessing and managing email messages through Microsoft Outlook
 - [Quick Start](https://developer.microsoft.com/graph/quick-start)
 
 ### OneDrive API
-API for accessing and managing files stored in OneDrive and SharePoint
+
+API for accessing and managing files stored in OneDrive and SharePoint.
 
 **Human URL:** [https://developer.microsoft.com/onedrive](https://developer.microsoft.com/onedrive)
 
+**Base URL:** https://graph.microsoft.com/v1.0/me/drive
 
-#### Tags:
+#### Tags
 
- - storage, files, cloud, collaboration
+- Cloud
+- Collaboration
+- Files
+- Storage
 
 #### Properties
 
@@ -82,14 +112,19 @@ API for accessing and managing files stored in OneDrive and SharePoint
 - [File Picker](https://docs.microsoft.com/onedrive/developer/controls/file-pickers/)
 
 ### SharePoint API
-API for accessing SharePoint sites, lists, and content
+
+API for accessing SharePoint sites, lists, and content.
 
 **Human URL:** [https://developer.microsoft.com/sharepoint](https://developer.microsoft.com/sharepoint)
 
+**Base URL:** https://graph.microsoft.com/v1.0/sites
 
-#### Tags:
+#### Tags
 
- - collaboration, content management, enterprise, intranet
+- Collaboration
+- Content Management
+- Enterprise
+- Intranet
 
 #### Properties
 
@@ -98,14 +133,19 @@ API for accessing SharePoint sites, lists, and content
 - [Framework](https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview)
 
 ### Azure Active Directory API
-API for identity and access management in Azure AD
+
+API for identity and access management in Azure AD.
 
 **Human URL:** [https://developer.microsoft.com/identity](https://developer.microsoft.com/identity)
 
+**Base URL:** https://graph.microsoft.com/v1.0/users
 
-#### Tags:
+#### Tags
 
- - identity, authentication, authorization, security
+- Authentication
+- Authorization
+- Identity
+- Security
 
 #### Properties
 
@@ -114,14 +154,18 @@ API for identity and access management in Azure AD
 - [Microsoft Identity Platform](https://docs.microsoft.com/azure/active-directory/develop/v2-overview)
 
 ### Microsoft To Do API
-API for managing tasks and to-do lists
+
+API for managing tasks and to-do lists.
 
 **Human URL:** [https://developer.microsoft.com/graph](https://developer.microsoft.com/graph)
 
+**Base URL:** https://graph.microsoft.com/v1.0/me/todo
 
-#### Tags:
+#### Tags
 
- - productivity, tasks, planning
+- Planning
+- Productivity
+- Tasks
 
 #### Properties
 
@@ -129,22 +173,32 @@ API for managing tasks and to-do lists
 - [API Reference](https://docs.microsoft.com/graph/api/resources/todotask)
 
 ### Microsoft Planner API
-API for creating and managing plans, tasks, and team collaboration
+
+API for creating and managing plans, tasks, and team collaboration.
 
 **Human URL:** [https://developer.microsoft.com/graph](https://developer.microsoft.com/graph)
 
+**Base URL:** https://graph.microsoft.com/v1.0/planner
 
-#### Tags:
+#### Tags
 
- - project management, collaboration, productivity, tasks
+- Collaboration
+- Productivity
+- Project Management
+- Tasks
 
 #### Properties
 
 - [Documentation](https://docs.microsoft.com/graph/api/resources/planner-overview)
 - [API Reference](https://docs.microsoft.com/graph/api/resources/plannertask)
 
+## Include
+
+- [Microsoft Developer Network](https://developer.microsoft.com)
+- [Microsoft Learn](https://docs.microsoft.com)
+
 ## Maintainers
 
-**FN:** Microsoft
+**FN:** Kin Lane
 
-**Email:** support@microsoft.com
+**Email:** kin@apievangelist.com
