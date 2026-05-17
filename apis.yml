@@ -47,7 +47,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/microsoftteams/platform/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-overview
       - type: Bot Framework
         url: https://docs.microsoft.com/microsoftteams/platform/bots/what-are-bots
@@ -66,7 +66,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/graph/api/resources/mail-api-overview
-      - type: API Reference
+      - type: APIReference
         url: https://docs.microsoft.com/graph/api/resources/message
       - type: Quick Start
         url: https://developer.microsoft.com/graph/quick-start
@@ -84,7 +84,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/onedrive/developer/
-      - type: API Reference
+      - type: APIReference
         url: https://docs.microsoft.com/graph/api/resources/onedrive
       - type: File Picker
         url: https://docs.microsoft.com/onedrive/developer/controls/file-pickers/
@@ -137,7 +137,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/graph/api/resources/todo-overview
-      - type: API Reference
+      - type: APIReference
         url: https://docs.microsoft.com/graph/api/resources/todotask
   - name: Microsoft Planner API
     description: >-
@@ -153,7 +153,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/graph/api/resources/planner-overview
-      - type: API Reference
+      - type: APIReference
         url: https://docs.microsoft.com/graph/api/resources/plannertask
 maintainers:
   - FN: Kin Lane
