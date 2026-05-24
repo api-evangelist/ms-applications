@@ -1,0 +1,175 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Graph API (Applications)
+  description: |
+    Subset of the Microsoft Graph REST API surface covering common Microsoft 365
+    application scenarios: user profile, mail, calendar, files (OneDrive), contacts,
+    groups, and people insights. Authentication uses the Microsoft identity platform
+    (OAuth 2.0) with a bearer access token.
+  version: "1.0"
+  contact:
+    name: Microsoft Graph
+    url: https://developer.microsoft.com/graph
+  license:
+    name: Microsoft APIs Terms of Use
+    url: https://learn.microsoft.com/en-us/legal/microsoft-apis/terms-of-use
+servers:
+  - url: https://graph.microsoft.com/v1.0
+    description: Microsoft Graph v1.0
+  - url: https://graph.microsoft.com/beta
+    description: Microsoft Graph beta
+security:
+  - oauth2: []
+paths:
+  /me:
+    get:
+      operationId: getMyProfile
+      summary: Get the signed-in user profile
+      responses:
+        '200':
+          description: User profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '401':
+          description: Unauthorized
+  /me/messages:
+    get:
+      operationId: listMyMessages
+      summary: List the signed-in user's mail messages
+      parameters:
+        - in: query
+          name: $filter
+          schema:
+            type: string
+        - in: query
+          name: $top
+          schema:
+            type: integer
+        - in: query
+          name: $select
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Collection of messages
+  /me/events:
+    get:
+      operationId: listMyCalendarEvents
+      summary: List the signed-in user's calendar events
+      responses:
+        '200':
+          description: Collection of events
+  /me/drive/root/children:
+    get:
+      operationId: listMyDriveRootChildren
+      summary: List items in the root of the user's drive
+      responses:
+        '200':
+          description: Collection of driveItems
+  /me/manager:
+    get:
+      operationId: getMyManager
+      summary: Get the signed-in user's manager
+      responses:
+        '200':
+          description: Manager user object
+  /me/people:
+    get:
+      operationId: listPeopleAroundMe
+      summary: List people related to the signed-in user
+      responses:
+        '200':
+          description: Collection of person resources
+  /me/memberOf:
+    get:
+      operationId: listMyMemberships
+      summary: List directory objects the user is a member of
+      responses:
+        '200':
+          description: Collection of directory objects
+  /me/photo/$value:
+    get:
+      operationId: getMyPhoto
+      summary: Get the signed-in user's profile photo binary
+      responses:
+        '200':
+          description: Photo binary
+          content:
+            image/jpeg:
+              schema:
+                type: string
+                format: binary
+  /users:
+    get:
+      operationId: listUsers
+      summary: List users in the organization
+      parameters:
+        - in: query
+          name: $filter
+          schema:
+            type: string
+        - in: query
+          name: $top
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Collection of users
+  /users/{user-id}:
+    get:
+      operationId: getUser
+      summary: Get a user by id or userPrincipalName
+      parameters:
+        - in: path
+          name: user-id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: User
+  /groups:
+    get:
+      operationId: listGroups
+      summary: List groups in the organization
+      responses:
+        '200':
+          description: Collection of groups
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: Microsoft identity platform OAuth 2.0
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            User.Read: Sign in and read user profile
+            Mail.Read: Read user mail
+            Files.Read: Read user files
+            Calendars.Read: Read user calendars
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            https://graph.microsoft.com/.default: Application permissions
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+        displayName:
+          type: string
+        givenName:
+          type: string
+        surname:
+          type: string
+        userPrincipalName:
+          type: string
+        mail:
+          type: string
+        jobTitle:
+          type: string
