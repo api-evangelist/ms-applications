@@ -1,0 +1,903 @@
+{
+  "item": [
+    {
+      "id": "1b0ad33e-d26d-4ec3-8f41-2816f8423abe",
+      "name": "Get the signed-in user profile",
+      "request": {
+        "name": "Get the signed-in user profile",
+        "description": {},
+        "url": {
+          "path": [
+            "me"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "3d4bbc0f-020f-4325-a498-2099dcff52c5",
+          "name": "User profile",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "me"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"id\": \"string\",\n  \"displayName\": \"string\",\n  \"givenName\": \"string\",\n  \"surname\": \"string\",\n  \"userPrincipalName\": \"string\",\n  \"mail\": \"string\",\n  \"jobTitle\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "7e35ceb3-2392-4d83-9e69-2aaa43e59db9",
+          "name": "Unauthorized",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "me"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "9ced7340-e7ee-46b4-a3a6-3fa4594eb647",
+      "name": "List the signed-in user's mail messages",
+      "request": {
+        "name": "List the signed-in user's mail messages",
+        "description": {},
+        "url": {
+          "path": [
+            "me",
+            "messages"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "$filter",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "$top",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "$select",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "0a6221a8-ca64-4a2f-86fd-96dcd5cfb68b",
+          "name": "Collection of messages",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "me",
+                "messages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "$filter",
+                  "value": "<string>"
+                },
+                {
+                  "key": "$top",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "$select",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "b87dc975-8638-48c9-9a8c-185ef920bf59",
+      "name": "List the signed-in user's calendar events",
+      "request": {
+        "name": "List the signed-in user's calendar events",
+        "description": {},
+        "url": {
+          "path": [
+            "me",
+            "events"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "537dafe7-9369-40ff-835f-62233ba755a3",
+          "name": "Collection of events",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "me",
+                "events"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "99b3cb9f-cb85-4393-94b9-79da8ec620f2",
+      "name": "List items in the root of the user's drive",
+      "request": {
+        "name": "List items in the root of the user's drive",
+        "description": {},
+        "url": {
+          "path": [
+            "me",
+            "drive",
+            "root",
+            "children"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "d7840243-e74a-4a8c-ad0b-b331003170aa",
+          "name": "Collection of driveItems",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "me",
+                "drive",
+                "root",
+                "children"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7b835a11-398b-4d65-a1c7-9c3f34738d14",
+      "name": "Get the signed-in user's manager",
+      "request": {
+        "name": "Get the signed-in user's manager",
+        "description": {},
+        "url": {
+          "path": [
+            "me",
+            "manager"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "f6fa940a-712d-4676-9bfc-4c5883f0fa87",
+          "name": "Manager user object",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "me",
+                "manager"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "4dc66957-29df-42c2-8835-708c048735e7",
+      "name": "List people related to the signed-in user",
+      "request": {
+        "name": "List people related to the signed-in user",
+        "description": {},
+        "url": {
+          "path": [
+            "me",
+            "people"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "0c327c3a-882f-41bb-ae0f-ddc8d6ef4bec",
+          "name": "Collection of person resources",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "me",
+                "people"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "bf7b672c-894f-44c8-b5ea-a4447066b8eb",
+      "name": "List directory objects the user is a member of",
+      "request": {
+        "name": "List directory objects the user is a member of",
+        "description": {},
+        "url": {
+          "path": [
+            "me",
+            "memberOf"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "0883e990-7a17-4594-8846-001df88b8e93",
+          "name": "Collection of directory objects",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "me",
+                "memberOf"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "39040061-f96a-49c5-9205-c59fb1b922fd",
+      "name": "Get the signed-in user's profile photo binary",
+      "request": {
+        "name": "Get the signed-in user's profile photo binary",
+        "description": {},
+        "url": {
+          "path": [
+            "me",
+            "photo",
+            "$value"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "image/jpeg"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "1bf46d66-67ea-4b17-a68a-2498ce2008d1",
+          "name": "Photo binary",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "me",
+                "photo",
+                "$value"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "image/jpeg"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "image/jpeg"
+            }
+          ],
+          "body": "string",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "02a4b8c1-5fa5-4c64-8be5-b611e46cab90",
+      "name": "List users in the organization",
+      "request": {
+        "name": "List users in the organization",
+        "description": {},
+        "url": {
+          "path": [
+            "users"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "$filter",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "$top",
+              "value": "<integer>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "dd7dcf05-9459-432f-bb26-ad9fb5aad6ea",
+          "name": "Collection of users",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "$filter",
+                  "value": "<string>"
+                },
+                {
+                  "key": "$top",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "1f45c062-f18d-47fb-abd4-9e6630dd54de",
+      "name": "Get a user by id or userPrincipalName",
+      "request": {
+        "name": "Get a user by id or userPrincipalName",
+        "description": {},
+        "url": {
+          "path": [
+            "users",
+            ":user-id"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "user-id",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "d8515bed-9e58-4496-8a95-fe91c2efab40",
+          "name": "User",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "users",
+                ":user-id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "user-id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "72d3f121-4652-4e7e-a5d4-654cb91134a0",
+      "name": "List groups in the organization",
+      "request": {
+        "name": "List groups in the organization",
+        "description": {},
+        "url": {
+          "path": [
+            "groups"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "02d91f51-c12d-4db6-a602-fa80fc8cce06",
+          "name": "Collection of groups",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "groups"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://graph.microsoft.com/v1.0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "User.Read Mail.Read Files.Read Calendars.Read"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "83e599ad-6ccc-4eef-8b5b-42fdae7c7b12",
+    "name": "Microsoft Graph API (Applications)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Subset of the Microsoft Graph REST API surface covering common Microsoft 365\napplication scenarios: user profile, mail, calendar, files (OneDrive), contacts,\ngroups, and people insights. Authentication uses the Microsoft identity platform\n(OAuth 2.0) with a bearer access token.\n\n\nContact Support:\n Name: Microsoft Graph",
+      "type": "text/plain"
+    }
+  }
+}
