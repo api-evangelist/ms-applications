@@ -68,7 +68,7 @@ apis:
         url: https://docs.microsoft.com/graph/api/resources/mail-api-overview
       - type: APIReference
         url: https://docs.microsoft.com/graph/api/resources/message
-      - type: Quick Start
+      - type: GettingStarted
         url: https://developer.microsoft.com/graph/quick-start
   - name: OneDrive API
     description: >-
