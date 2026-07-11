@@ -171,3 +171,8 @@ include:
     url: https://developer.microsoft.com
   - name: Microsoft Learn
     url: https://docs.microsoft.com
+common:
+  - type: OAuthScopes
+    url: scopes/ms-applications-scopes.yml
+  - url: https://devblogs.microsoft.com/microsoft365dev/feed/
+    type: Blog

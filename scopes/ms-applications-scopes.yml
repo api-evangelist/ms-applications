@@ -1,0 +1,44 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/ms-applications-openapi.yml
+schemes:
+- name: oauth2
+  source: openapi/ms-applications-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+    tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+  - flow: clientCredentials
+    tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+  description: Microsoft identity platform OAuth 2.0
+scopes:
+- scope: Calendars.Read
+  description: Read user calendars
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/ms-applications-openapi.yml
+- scope: Files.Read
+  description: Read user files
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/ms-applications-openapi.yml
+- scope: Mail.Read
+  description: Read user mail
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/ms-applications-openapi.yml
+- scope: User.Read
+  description: Sign in and read user profile
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/ms-applications-openapi.yml
+- scope: https://graph.microsoft.com/.default
+  description: Application permissions
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/ms-applications-openapi.yml
