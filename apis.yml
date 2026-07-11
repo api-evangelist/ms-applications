@@ -172,6 +172,12 @@ include:
   - name: Microsoft Learn
     url: https://docs.microsoft.com
 common:
+  - type: VulnerabilityDisclosure
+    url: security/ms-applications-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/ms-applications-domain-security.yml
+  - type: Authentication
+    url: authentication/ms-applications-authentication.yml
   - type: OAuthScopes
     url: scopes/ms-applications-scopes.yml
   - url: https://devblogs.microsoft.com/microsoft365dev/feed/
