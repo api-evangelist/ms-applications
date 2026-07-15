@@ -172,6 +172,8 @@ include:
   - name: Microsoft Learn
     url: https://docs.microsoft.com
 common:
+  - type: AgenticAccess
+    url: agentic-access/ms-applications-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/ms-applications-vulnerability-disclosure.yml
   - type: DomainSecurity
