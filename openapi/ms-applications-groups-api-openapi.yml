@@ -1,0 +1,56 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Graph API (Applications) Groups API
+  description: 'Subset of the Microsoft Graph REST API surface covering common Microsoft 365
+
+    application scenarios: user profile, mail, calendar, files (OneDrive), contacts,
+
+    groups, and people insights. Authentication uses the Microsoft identity platform
+
+    (OAuth 2.0) with a bearer access token.
+
+    '
+  version: '1.0'
+  contact:
+    name: Microsoft Graph
+    url: https://developer.microsoft.com/graph
+  license:
+    name: Microsoft APIs Terms of Use
+    url: https://learn.microsoft.com/en-us/legal/microsoft-apis/terms-of-use
+servers:
+- url: https://graph.microsoft.com/v1.0
+  description: Microsoft Graph v1.0
+- url: https://graph.microsoft.com/beta
+  description: Microsoft Graph beta
+security:
+- oauth2: []
+tags:
+- name: Groups
+paths:
+  /groups:
+    get:
+      operationId: listGroups
+      summary: List groups in the organization
+      responses:
+        '200':
+          description: Collection of groups
+      tags:
+      - Groups
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: Microsoft identity platform OAuth 2.0
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            User.Read: Sign in and read user profile
+            Mail.Read: Read user mail
+            Files.Read: Read user files
+            Calendars.Read: Read user calendars
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            https://graph.microsoft.com/.default: Application permissions

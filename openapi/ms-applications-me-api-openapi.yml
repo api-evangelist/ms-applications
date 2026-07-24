@@ -1,12 +1,16 @@
 openapi: 3.1.0
 info:
-  title: Microsoft Graph API (Applications)
-  description: |
-    Subset of the Microsoft Graph REST API surface covering common Microsoft 365
+  title: Microsoft Graph API (Applications) Groups Me API
+  description: 'Subset of the Microsoft Graph REST API surface covering common Microsoft 365
+
     application scenarios: user profile, mail, calendar, files (OneDrive), contacts,
+
     groups, and people insights. Authentication uses the Microsoft identity platform
+
     (OAuth 2.0) with a bearer access token.
-  version: "1.0"
+
+    '
+  version: '1.0'
   contact:
     name: Microsoft Graph
     url: https://developer.microsoft.com/graph
@@ -14,12 +18,14 @@ info:
     name: Microsoft APIs Terms of Use
     url: https://learn.microsoft.com/en-us/legal/microsoft-apis/terms-of-use
 servers:
-  - url: https://graph.microsoft.com/v1.0
-    description: Microsoft Graph v1.0
-  - url: https://graph.microsoft.com/beta
-    description: Microsoft Graph beta
+- url: https://graph.microsoft.com/v1.0
+  description: Microsoft Graph v1.0
+- url: https://graph.microsoft.com/beta
+  description: Microsoft Graph beta
 security:
-  - oauth2: []
+- oauth2: []
+tags:
+- name: Me
 paths:
   /me:
     get:
@@ -34,26 +40,30 @@ paths:
                 $ref: '#/components/schemas/User'
         '401':
           description: Unauthorized
+      tags:
+      - Me
   /me/messages:
     get:
       operationId: listMyMessages
       summary: List the signed-in user's mail messages
       parameters:
-        - in: query
-          name: $filter
-          schema:
-            type: string
-        - in: query
-          name: $top
-          schema:
-            type: integer
-        - in: query
-          name: $select
-          schema:
-            type: string
+      - in: query
+        name: $filter
+        schema:
+          type: string
+      - in: query
+        name: $top
+        schema:
+          type: integer
+      - in: query
+        name: $select
+        schema:
+          type: string
       responses:
         '200':
           description: Collection of messages
+      tags:
+      - Me
   /me/events:
     get:
       operationId: listMyCalendarEvents
@@ -61,6 +71,8 @@ paths:
       responses:
         '200':
           description: Collection of events
+      tags:
+      - Me
   /me/drive/root/children:
     get:
       operationId: listMyDriveRootChildren
@@ -68,6 +80,8 @@ paths:
       responses:
         '200':
           description: Collection of driveItems
+      tags:
+      - Me
   /me/manager:
     get:
       operationId: getMyManager
@@ -75,6 +89,8 @@ paths:
       responses:
         '200':
           description: Manager user object
+      tags:
+      - Me
   /me/people:
     get:
       operationId: listPeopleAroundMe
@@ -82,6 +98,8 @@ paths:
       responses:
         '200':
           description: Collection of person resources
+      tags:
+      - Me
   /me/memberOf:
     get:
       operationId: listMyMemberships
@@ -89,6 +107,8 @@ paths:
       responses:
         '200':
           description: Collection of directory objects
+      tags:
+      - Me
   /me/photo/$value:
     get:
       operationId: getMyPhoto
@@ -101,60 +121,9 @@ paths:
               schema:
                 type: string
                 format: binary
-  /users:
-    get:
-      operationId: listUsers
-      summary: List users in the organization
-      parameters:
-        - in: query
-          name: $filter
-          schema:
-            type: string
-        - in: query
-          name: $top
-          schema:
-            type: integer
-      responses:
-        '200':
-          description: Collection of users
-  /users/{user-id}:
-    get:
-      operationId: getUser
-      summary: Get a user by id or userPrincipalName
-      parameters:
-        - in: path
-          name: user-id
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: User
-  /groups:
-    get:
-      operationId: listGroups
-      summary: List groups in the organization
-      responses:
-        '200':
-          description: Collection of groups
+      tags:
+      - Me
 components:
-  securitySchemes:
-    oauth2:
-      type: oauth2
-      description: Microsoft identity platform OAuth 2.0
-      flows:
-        authorizationCode:
-          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
-          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
-          scopes:
-            User.Read: Sign in and read user profile
-            Mail.Read: Read user mail
-            Files.Read: Read user files
-            Calendars.Read: Read user calendars
-        clientCredentials:
-          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
-          scopes:
-            https://graph.microsoft.com/.default: Application permissions
   schemas:
     User:
       type: object
@@ -173,3 +142,20 @@ components:
           type: string
         jobTitle:
           type: string
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: Microsoft identity platform OAuth 2.0
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            User.Read: Sign in and read user profile
+            Mail.Read: Read user mail
+            Files.Read: Read user files
+            Calendars.Read: Read user calendars
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            https://graph.microsoft.com/.default: Application permissions
