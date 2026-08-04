@@ -1,0 +1,18 @@
+{
+  "provider": "ms-applications",
+  "sources": [
+    "ms-applications-groups-api-openapi.yml",
+    "ms-applications-me-api-openapi.yml",
+    "ms-applications-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "ms-applications-groups-api-openapi.yml",
+    "ms-applications-me-api-openapi.yml",
+    "ms-applications-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
