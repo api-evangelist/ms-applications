@@ -21,7 +21,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ms-applica
 url: https://developer.microsoft.com
 created: '2024-01-15'
 modified: '2026-04-28'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - name: Microsoft Teams API
   description: API for building apps and bots that integrate with Microsoft Teams.
