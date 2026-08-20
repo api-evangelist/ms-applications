@@ -66,6 +66,11 @@ apis:
   tags:
   - Cloud
   - Collaboration
+  - File
+  - Storage
+  tags_raw:
+  - Cloud
+  - Collaboration
   - Files
   - Storage
   properties:
@@ -119,6 +124,10 @@ apis:
   tags:
   - Planning
   - Productivity
+  - Task
+  tags_raw:
+  - Planning
+  - Productivity
   - Tasks
   properties:
   - type: Documentation
@@ -134,6 +143,11 @@ apis:
   - Collaboration
   - Productivity
   - Project Management
+  - Task
+  tags_raw:
+  - Collaboration
+  - Productivity
+  - Project Management
   - Tasks
   properties:
   - type: Documentation
@@ -146,6 +160,8 @@ apis:
   humanURL: https://developer.microsoft.com/graph
   baseURL: https://graph.microsoft.com
   tags:
+  - Group
+  tags_raw:
   - Groups
   properties:
   - type: OpenAPI
@@ -182,6 +198,8 @@ apis:
   humanURL: https://developer.microsoft.com/graph
   baseURL: https://graph.microsoft.com
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
@@ -198,6 +216,14 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 tags:
+  - Cloud
+  - Enterprise
+  - Microsoft
+  - Microsoft-365
+  - Office
+  - Productivity
+  - Software-as-a-Service
+tags_raw:
   - Cloud
   - Enterprise
   - Microsoft
